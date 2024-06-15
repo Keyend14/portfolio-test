@@ -108,5 +108,11 @@ window.addEventListener('resize', () => {
 });
 
 
+var image = new Image();
+image.onload = function() {
+    document.body.style.backgroundImage = 'url(' + image.src + ')';
+    document.querySelector('.content').style.visibility = 'visible';
+};
+image.src = './images/bg.jpg';
 
 });
